@@ -1,29 +1,17 @@
-import { createContext, useReducer, useState } from "react"
+import { createContext, useState } from "react"
+import { useFetch } from "../hooks/useFetch"
+import env from "react-dotenv"
 
 export const DataContext = createContext()
 
-const themeReducer = (url, action) => {
-    switch (action.type) {
-        case 'CHANGE_URL': 
-            return { url: action.payload }
-
-        default:
-            return url
-    }
-}
-
 export function DataProvider({ children }) {
 
-    const [url, dispatch] = useReducer(themeReducer, {
-        url: '',
-    })
+    const[url, setURL] = useState(`https://api.openweathermap.org/data/2.5/weather?q=Mumbai&appid=${ env.REACT_APP_API_KEY }`)
 
-    const changeURL = (url) => {
-        dispatch({ type: 'CHANGE_URL', payload: url})
-    }
+    const { data, isPending, error } = useFetch(url)
 
     return(
-        <DataContext.Provider value={{ url, changeURL }}>
+        <DataContext.Provider value={{ data, isPending, error, url, setURL }}>
             { children }
         </DataContext.Provider>
     )
