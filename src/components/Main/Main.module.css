@@ -1,0 +1,76 @@
+body{
+    background-image: url(/public/Images/bg-425.png);
+    background-size: cover;
+    background-attachment:fixed;
+}
+
+.mainContainer{
+    font-family: "Montserrat";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.weather_icon{
+    width: 8rem;
+    margin:1rem;
+}
+
+
+.mainContainer h1{
+    font-size: 7rem;
+    margin:0;    
+    font-weight:300;
+}
+
+.mainContainer h2{
+    font-size: 2.8rem;
+    margin:0;
+    margin-bottom:0.5rem;
+    font-weight:300;
+}
+
+.mainContainer h3{
+    font-size: 1.2rem;
+    margin:0;
+    font-weight:300;
+}
+
+
+@media only screen and (max-width:1034px) {
+    .weather_icon{
+        width: 5rem;
+        margin:1rem;
+    }
+    .mainContainer h1{
+        font-size: 5rem;
+    }
+    
+    .mainContainer h2{
+        font-size: 2rem;
+    }
+    
+    .mainContainer h3{
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width:550px) {
+    .weather_icon{
+        width: 3rem;
+        margin:1rem;
+    }
+    .mainContainer h1{
+        font-size: 4rem;
+    }
+    
+    .mainContainer h2{
+        font-size: 1.5rem;
+    }
+    
+    .mainContainer h3{
+        font-size: 1rem;
+    }
+}
