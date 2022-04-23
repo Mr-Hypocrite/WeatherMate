@@ -1,0 +1,82 @@
+/* Input */
+
+.inputContainer{
+    background-image: url("/public/Images/bg-425.png");
+    padding:2rem 8rem;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wmLogo{
+    width: 10rem;
+    margin: 0;
+    padding: 0;
+}
+
+.enterCity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+
+.inputContainer input{
+    background-color: transparent;
+    border: none;
+    padding: 0 0.3rem;     
+    width: 14rem;
+    font-size:1rem;
+    color:white;
+}
+
+.inputContainer input::placeholder{
+    color:white;
+    font-weight:600;
+    opacity: 50%;
+}
+
+.inputContainer input:focus{
+    outline: none;
+}
+
+
+.inputContainer button{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size:1.1rem;
+}
+
+@media only screen and (max-width: 1024px){
+    .inputContainer{
+        padding: 2rem 4rem;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .inputContainer input{
+        width: 10rem;
+    }
+}
+ 
+@media only screen and (max-width: 550px){
+    .inputContainer{
+        padding: 1rem 2rem;
+    }
+
+    .wmLogo{
+        width: 7rem;
+    }
+    
+    .inputContainer input{
+        width: 5rem;
+        font-size: 0.8rem;
+    }
+
+    .inputContainer button{
+        font-size:0.8rem;
+    }
+}
+
