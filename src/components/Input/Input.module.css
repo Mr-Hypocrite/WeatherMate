@@ -1,7 +1,6 @@
 /* Input */
 
 .inputContainer{
-    background-image: url("/public/Images/bg-425.png");
     padding:2rem 8rem;
     margin: 0;
     display: flex;
@@ -10,6 +9,7 @@
 }
 
 .wmLogo{
+    cursor: pointer;
     width: 10rem;
     margin: 0;
     padding: 0;

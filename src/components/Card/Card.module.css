@@ -1,0 +1,45 @@
+.card__container {
+    background-color: transparent;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    width: fit-content;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 1.5rem 1rem;
+    transition: all ease-in-out 0.8s;
+}
+
+.card__container:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.03)
+}
+
+.temp_minMax {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 1rem;
+}
+
+.card__container h2, h3, h4 {
+    color: white;
+    margin: 0;
+}
+
+.card__container img {
+    width: 1.5rem;
+}
+
+.card__container h2 {
+    font-size: 1rem;
+}
+
+.card__container h3 {
+    font-size: 0.9rem;
+}
+
+.card__container h4 {
+    font-size: 0.7rem;
+}

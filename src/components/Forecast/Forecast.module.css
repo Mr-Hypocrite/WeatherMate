@@ -1,0 +1,57 @@
+.forecast__container {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem auto;
+    width: 80%;
+}
+
+.forecast__container h3 {
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    margin:0;
+    font-weight:500;
+}
+
+.forecast__container button {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    color: white;
+}
+
+.left_button {
+    bottom: 0;
+    left: 2rem;
+    top: 0;
+}
+
+.right_button {
+    bottom: 0;
+    right: 2rem;
+    top: 0;
+}
+
+@media only screen and (max-width:1034px) {
+    .carousel__container h3{
+        color: white;
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .carousel_slide {
+        display: flex;
+        justify-content: space-around;
+        margin: 1rem auto;
+        padding: 1rem 0;
+        width: 75%;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .carousel__container h3 {
+        font-size: 0.8rem;
+    }
+}

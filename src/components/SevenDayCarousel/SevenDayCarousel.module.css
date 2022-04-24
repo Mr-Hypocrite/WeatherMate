@@ -1,0 +1,26 @@
+.carousel__container {
+    color: white;
+    max-width: 80%;
+    margin: 2rem auto;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 0.8rem 1rem;
+}
+
+.carousel_innerContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media only screen and (max-width: 900px) {
+
+    .carousel__container {
+        margin: 5rem auto;
+    }
+
+    .carousel_innerContainer {
+        max-width: 80%;
+        margin: auto;
+    }
+}

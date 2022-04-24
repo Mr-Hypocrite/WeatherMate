@@ -1,0 +1,8 @@
+.app__container {
+    background-image: url(/public/Images/bg-425.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    height: 100vh;
+}
