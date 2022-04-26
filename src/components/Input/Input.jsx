@@ -23,13 +23,17 @@ export default function Input() {
                     onKeyPress={ (e) => {
                         if (e.key === 'Enter') {
                             setURL(`https://api.openweathermap.org/data/2.5/weather?q=${ location }&appid=${ env.API_KEY }`)
+                            setLocation('')
                         }
                     } }
                 >
                 </input>
                 <button
                     type="submit"
-                    onClick={ () => setURL(`https://api.openweathermap.org/data/2.5/weather?q=${ location }&appid=${ env.API_KEY }`) }
+                    onClick={ () => { 
+                        setURL(`https://api.openweathermap.org/data/2.5/weather?q=${ location }&appid=${ env.API_KEY }`)
+                        setLocation('')
+                    } }
                 >
                     <i className="fa-solid fa-magnifying-glass"></i>
                 </button>

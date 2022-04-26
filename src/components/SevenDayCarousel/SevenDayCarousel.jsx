@@ -12,7 +12,7 @@ export default function SevenDayCarousel() {
 
     if (foreCastData !== null) {
 
-        if (screenWidth > 900) {
+        if (screenWidth > 1200) {
             return (
                 <div className={styles.carousel__container}>
         

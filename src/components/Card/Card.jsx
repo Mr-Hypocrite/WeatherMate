@@ -12,8 +12,6 @@ export default function Card( { props } ) {
 
   weekDay = days[date.getDay()]
 
-  console.log(props.weather[0].icon)
-
   return (
     <div className={styles.card__container}>
         <h2>{ weekDay }, { day }</h2>
