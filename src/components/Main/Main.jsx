@@ -2,7 +2,7 @@ import React from 'react'
 import { useData } from '../../hooks/useData'
 import styles from "./Main.module.css"
 var _ = require('lodash')
-let date, time
+let date, time, time2
 
 export default function Main() {
 
@@ -13,7 +13,24 @@ export default function Main() {
       date = new Date(data.dt * 1000)
       time = date.toLocaleTimeString()
       date = date.toDateString()
+      time2 = Math.floor((new Date().getUTCHours() + new Date().getUTCMinutes() / 60) + new Date(data.timezone) / 3600)
+
+      document.getElementById(`container`).style.backgroundImage = `url(https://github.com/Mr-Hypocrite/WeatherMate/blob/main/public/Images/bg-425.png?raw=true)`
+
+      if (time2 > 16 && time2 < 19) {
+        document.getElementById(`container`).style.backgroundImage = `url(https://github.com/Mr-Hypocrite/WeatherMate/blob/main/public/Images/Morning_Partly_cloudy.png?raw=true)`
+      } else if (time2 > 19 && time2 < 4)
+      {
+        document.getElementById(`container`).style.backgroundImage = `url(https://github.com/Mr-Hypocrite/WeatherMate/blob/main/public/Images/Night_Misty.png?raw=true)`
+      } else if (time2 > 4 && time2 < 8) {
+        document.getElementById(`container`).style.backgroundImage = `url(https://github.com/Mr-Hypocrite/WeatherMate/blob/main/public/Images/Morning_Partly_cloudy.png?raw=true)`
+      }
+  
+      if (data.weather[0].description.includes('rain') || data.weather[0].description.includes('thunder') || data.weather[0].description.includes('drizzle')) {
+        document.getElementById(`container`).style.backgroundImage = `url(https://github.com/Mr-Hypocrite/WeatherMate/blob/main/public/Images/Rains.png?raw=true)`
+      }
     }
+
   }, [data])
 
   if (data !== null) {
