@@ -11,3 +11,10 @@ body {
 .carousel-indicators {
   bottom: -1.7rem;
 }
+
+#container {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
