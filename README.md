@@ -10,7 +10,7 @@ https://user-images.githubusercontent.com/85545016/150809313-928779a6-cfcc-46d2-
 - Cross Platform
 - Live Weather
 - Clean and Precise UI
-- Live Weather data
+- 7-Day Forecast
 
 **Stack:** React, HTML, CSS, JavaScript, API
 
